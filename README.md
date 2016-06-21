@@ -25,9 +25,25 @@ https://www.datacamp.com/courses/intermediate-r/chapter-1-conditionals-and-contr
 > 
 > # When is views between 11 (exclusive) and 14 (inclusive)?
 > 11<views&views<=14
+
+Equality
+The most basic form of comparison is equality. Let's briefly recap its syntax. The following statements all evaluate to TRUE (feel free to try them out in the console).
+> # Comparison of logicals
+> TRUE==FALSE
+[1] FALSE
+> 
+> # Comparison of numerics
+> -6*14!=17-101
+[1] FALSE
+> 
+> # Comparison of character strings
+> "useR"=="user"
+[1] FALSE
+> 
+> # Compare a logical with a numeric
+> TRUE==1
+[1] TRUE
+ 
       [,1]  [,2]  [,3]  [,4]  [,5]  [,6] [,7]
 [1,] FALSE FALSE  TRUE FALSE FALSE FALSE TRUE
 [2,] FALSE FALSE FALSE FALSE FALSE  TRUE TRUE
->  
-
-HintRun
