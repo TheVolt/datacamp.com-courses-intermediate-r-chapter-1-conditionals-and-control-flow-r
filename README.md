@@ -1,3 +1,11 @@
+# Construct a matrix with 3 rows that contain the numbers 1 up to 9
+matrix(1:9, byrow=TRUE,nrow=3)
+> matrix(1:9,byrow=TRUE,nrow=3)
+     [,1] [,2] [,3]
+[1,]    1    2    3
+[2,]    4    5    6
+[3,]    7    8    9
+
 # README-EDITS - Branch:readme-edits - GITHUB GUIDES
 
 # datacamp.com-courses-intermediate-r-chapter-1-conditionals-and-control-flow-r
