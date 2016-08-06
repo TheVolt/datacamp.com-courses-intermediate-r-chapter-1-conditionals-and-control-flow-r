@@ -118,3 +118,21 @@ https://www.datacamp.com/courses/intermediate-r/chapter-1-conditionals-and-contr
 > 
 > # When is views between 11 (exclusive) and 14 (inclusive)?
 > 11<views&views<=14
+
+## Blend It All Together ##
+> # li_df is pre-loaded in your workspace
+> 
+> # Select the second column, named day2, from li_df: second
+> li_df$day2
+ [1]  3 23 18 18 25 20  4  3 22 12 27 13 17 27  6 35 17  6  1 12 15 17 12  8  7
+[26] 25 15 32 29  1 22 11  5 17 12 26 13 10 37 33 19 29  8 22 10 19 27 18 15 28
+> 
+> # Build a logical vector, TRUE if value in second is extreme: extremes
+> second <-(li_df$day2)
+> 
+> # Count the number of TRUEs in extremes
+> extremes <- (second>25 | second<5)
+> 
+> # Solve it with a one-liner
+> sum(extremes)
+[1] 16
