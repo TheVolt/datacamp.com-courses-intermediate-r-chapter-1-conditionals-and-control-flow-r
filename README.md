@@ -136,3 +136,15 @@ https://www.datacamp.com/courses/intermediate-r/chapter-1-conditionals-and-contr
 > # Solve it with a one-liner
 > sum(extremes)
 [1] 16
+> # Variables related to your last day of recordings
+> medium <- "LinkedIn"
+> num_views <- 14
+> 
+> # Examine the if statement for medium
+> if (medium == "LinkedIn") {
+  print("Showing LinkedIn information")}
+[1] "Showing LinkedIn information"
+> 
+> # Write the if statement for num_views
+> if (num_views > 15) {
+print ("You're popular!")}
