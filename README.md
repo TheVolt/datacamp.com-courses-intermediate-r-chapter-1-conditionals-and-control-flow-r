@@ -11,31 +11,6 @@ matrix(1:9, byrow=TRUE,nrow=3)
 # datacamp.com-courses-intermediate-r-chapter-1-conditionals-and-control-flow-r
 https://www.datacamp.com/courses/intermediate-r/chapter-1-conditionals-and-control-flow-r
 
-## & and | ##
-# The linkedin and last variable are already defined for you
-> linkedin <- c(16, 9, 13, 5, 2, 17, 14)
-> last <- tail(linkedin, 1)
-> 
-> # Is last under 5 or above 10?
-> last<5|last>10
-[1] TRUE
-> 
-> # Is last between 15 (exclusive) and 20 (inclusive)?
-> 15<last&last<=20
-[1] FALSE
-
-## & and |(2) ##
-# linkedin exceeds 10 but facebook below 10
-> 10<linkedin&10>facebook
-[1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
-> 
-> # When were one or both visited at least 12 times?
-> 12<=linkedin|12<=facebook
-[1]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
-> 
-> # When is views between 11 (exclusive) and 14 (inclusive)?
-> 11<views&views<=14
-
 ## EQUALITY ##
 ## The most basic form of comparison is equality. Let's briefly recap its syntax. The following statements all evaluate to TRUE (feel free to try them out in the console).
 > # Comparison of logicals
@@ -85,4 +60,61 @@ https://www.datacamp.com/courses/intermediate-r/chapter-1-conditionals-and-contr
 > # Comparison of logicals
 > TRUE>FALSE
 [1] TRUE
->  
+## COMPARE VECTORS ##
+>   # The linkedin and facebook vectors have already been created for you
+> linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+> facebook <- c(17, 7, 5, 16, 8, 13, 14)
+> 
+> # Popular days
+> linkedin>15
+[1]  TRUE FALSE FALSE FALSE FALSE  TRUE FALSE
+> 
+> # Quiet days
+> linkedin<=5
+[1] FALSE FALSE FALSE  TRUE  TRUE FALSE FALSE
+> 
+> # LinkedIn more popular than Facebook
+> linkedin>facebook
+[1] FALSE  TRUE  TRUE FALSE FALSE  TRUE FALSE
+## COMPARE MATRICES ##
+> # The social data has been created for you
+> linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+> facebook <- c(17, 7, 5, 16, 8, 13, 14)
+> views <- matrix(c(linkedin, facebook), nrow = 2, byrow = TRUE)
+> 
+> # When does views equal 13?
+> views==13
+      [,1]  [,2]  [,3]  [,4]  [,5]  [,6]  [,7]
+[1,] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+[2,] FALSE FALSE FALSE FALSE FALSE  TRUE FALSE
+> 
+> # When is views less than or equal to 14?
+> views<=14
+      [,1] [,2] [,3]  [,4] [,5]  [,6] [,7]
+[1,] FALSE TRUE TRUE  TRUE TRUE FALSE TRUE
+[2,] FALSE TRUE TRUE FALSE TRUE  TRUE TRUE
+
+## & and | ##
+# The linkedin and last variable are already defined for you
+> linkedin <- c(16, 9, 13, 5, 2, 17, 14)
+> last <- tail(linkedin, 1)
+> 
+> # Is last under 5 or above 10?
+> last<5|last>10
+[1] TRUE
+> 
+> # Is last between 15 (exclusive) and 20 (inclusive)?
+> 15<last&last<=20
+[1] FALSE
+
+## & and |(2) ##
+# linkedin exceeds 10 but facebook below 10
+> 10<linkedin&10>facebook
+[1] FALSE FALSE  TRUE FALSE FALSE FALSE FALSE
+> 
+> # When were one or both visited at least 12 times?
+> 12<=linkedin|12<=facebook
+[1]  TRUE FALSE  TRUE  TRUE FALSE  TRUE  TRUE
+> 
+> # When is views between 11 (exclusive) and 14 (inclusive)?
+> 11<views&views<=14
